@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="12dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#f9f9f9">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editNoteIconButton"
+        android:src="@drawable/p"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="15dp"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteScrollView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/editNoteIconButton"
+        android:layout_alignBottom="@+id/editNoteIconButton">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editNoteTitle"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:inputType="text"
+                android:minLines="1" />
+
+    </ScrollView>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/noteScrollView3"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="4dp"
+        android:layout_below="@+id/noteScrollView2"
+        android:layout_above="@+id/editSaveButton">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editNoteMessage"
+                android:text="New Note"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:background="@null"
+                android:gravity="top" />
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/noteScrollView3"
+        android:id="@+id/editSaveButton"
+        android:text="@string/save_button" />
+
+</RelativeLayout>
